@@ -16,6 +16,6 @@ jobs:
     - name: Upload to Azure App Service
       uses: azure/webapps-deploy@v3
       with:
-        app-name: 'test-genaiqep-maintenance'
+        app-name: 'dev-genaiqep__maintenance'
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
         package: .
