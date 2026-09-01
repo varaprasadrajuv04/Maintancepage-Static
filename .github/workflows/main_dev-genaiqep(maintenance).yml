@@ -49,7 +49,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'dev-genaiqep'
-          slot-name: 'maintenance'
+          app-name: 'dev-genaiqep__maintenance'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9BD23ED345964973A2DD717DFD01921E }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
