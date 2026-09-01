@@ -52,4 +52,4 @@ jobs:
           app-name: 'dev-genaiqep'
           slot-name: 'maintenance'
           package: .
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C7E0152C32FD415984EB0C637CC801BA }}
