@@ -1,0 +1,21 @@
+name: Deploy to Azure App Service
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Upload to Azure App Service
+      uses: azure/webapps-deploy@v3
+      with:
+        app-name: 'test-genaiqep-maintenance'
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+        package: .
