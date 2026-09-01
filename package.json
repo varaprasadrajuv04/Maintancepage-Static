@@ -4,6 +4,7 @@
   "description": "Static maintenance page for Azure App Service (no Node.js required)",
   "main": "index.html",
   "scripts": {
+    "start": "npx http-server . -p $PORT",
     "serve": "python -m http.server 8000",
     "serve-node": "npx http-server"
   },
