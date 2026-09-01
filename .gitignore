@@ -1,0 +1,15 @@
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Azure Files
+.azure/
+*.publishsettings
+
+# Distribution
+dist/
+build/

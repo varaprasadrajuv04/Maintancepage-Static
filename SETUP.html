@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Setup Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .info-box {
+            background-color: #f0f8ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        h1 { color: #2196F3; }
+        h2 { color: #333; margin-top: 30px; }
+        .step { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>📋 Maintenance Page - Static Version Setup</h1>
+    
+    <div class="info-box">
+        <strong>✅ Status:</strong> Your static maintenance page is ready for Azure App Service!
+    </div>
+
+    <h2>🖼️ Adding Your Maintenance Image</h2>
+    
+    <div class="step">
+        <h3>Step 1: Copy Your Image</h3>
+        <p>The app expects an image file at:</p>
+        <code>images/Maintenance-Page-GenAIQEP.png</code>
+        
+        <p>Copy your original image file to the <code>images/</code> folder:</p>
+        <ul>
+            <li>From: <code>Maintancepage/public/images/Maintenance-Page-GenAIQEP.png</code></li>
+            <li>To: <code>Maintancepage-Static/images/Maintenance-Page-GenAIQEP.png</code></li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h3>Step 2: Supported Image Formats</h3>
+        <p>You can use any of these image formats:</p>
+        <ul>
+            <li>PNG (.png)</li>
+            <li>JPEG/JPG (.jpg, .jpeg)</li>
+            <li>GIF (.gif)</li>
+            <li>WebP (.webp) - Best compression</li>
+            <li>SVG (.svg)</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h3>Step 3: Test Locally</h3>
+        <p>Before deploying to Azure, test locally:</p>
+        
+        <p><strong>Using Python:</strong></p>
+        <code>python -m http.server 8000</code>
+        
+        <p><strong>Using Node.js (http-server):</strong></p>
+        <code>npx http-server</code>
+        
+        <p>Then open: <code>http://localhost:8000</code></p>
+    </div>
+
+    <h2>🚀 Deployment Options</h2>
+
+    <div class="info-box">
+        <strong>Choose one of these methods:</strong>
+        <ul>
+            <li><strong>Azure Portal:</strong> Upload files directly via browser</li>
+            <li><strong>Azure CLI:</strong> Deploy via command line</li>
+            <li><strong>Visual Studio:</strong> One-click publish</li>
+            <li><strong>VS Code:</strong> Using Azure extension</li>
+            <li><strong>Git:</strong> Deploy via git push</li>
+        </ul>
+        
+        <p>See <code>DEPLOYMENT_GUIDE.md</code> for detailed instructions for each method.</p>
+    </div>
+
+    <h2>📁 Project Structure</h2>
+    <pre>
+Maintancepage-Static/
+├── index.html                    # Main page (do NOT modify filename)
+├── web.config                    # Azure/IIS configuration (required)
+├── package.json                  # Project info
+├── README.md                     # Project documentation
+├── DEPLOYMENT_GUIDE.md           # Azure deployment steps
+├── SETUP.html                    # This file
+└── images/
+    └── Maintenance-Page-GenAIQEP.png  # Add your image here
+    </pre>
+
+    <h2>⚙️ Configuration</h2>
+
+    <p>The <code>web.config</code> file automatically handles:</p>
+    <ul>
+        <li>✓ Serving <code>index.html</code> for root requests</li>
+        <li>✓ Image MIME types for all common formats</li>
+        <li>✓ Gzip compression for better performance</li>
+        <li>✓ Browser caching for optimal speed</li>
+        <li>✓ Proper error handling</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>⚠️ Important:</strong> Do NOT modify or remove <code>web.config</code> - it's required for Azure App Service to work correctly.
+    </div>
+
+    <h2>✨ Key Features</h2>
+    <ul>
+        <li>✓ <strong>No Node.js Required</strong> - Pure static HTML</li>
+        <li>✓ <strong>Fast Performance</strong> - Optimized for Azure App Service</li>
+        <li>✓ <strong>Mobile Responsive</strong> - Works on all devices</li>
+        <li>✓ <strong>Easy Deployment</strong> - Multiple deployment options</li>
+        <li>✓ <strong>SEO Friendly</strong> - Proper HTML structure</li>
+        <li>✓ <strong>Zero Dependencies</strong> - No packages to install</li>
+    </ul>
+
+    <h2>🔍 Verification Checklist</h2>
+    <ul>
+        <li>☐ Image file copied to <code>images/</code> folder</li>
+        <li>☐ Image file name matches <code>index.html</code> (case-sensitive on Linux)</li>
+        <li>☐ Tested locally and image displays correctly</li>
+        <li>☐ <code>web.config</code> is in root folder</li>
+        <li>☐ All files are in <code>Maintancepage-Static</code> folder</li>
+        <li>☐ Ready to deploy to Azure App Service</li>
+    </ul>
+
+    <h2>📞 Need Help?</h2>
+    <ol>
+        <li>Check <code>DEPLOYMENT_GUIDE.md</code> for detailed deployment steps</li>
+        <li>Review <code>README.md</code> for project overview</li>
+        <li>Check Azure App Service logs in the Azure Portal</li>
+        <li>Verify browser console for errors (F12 key)</li>
+    </ol>
+
+    <hr>
+    <p style="color: #666; font-size: 14px;">
+        <strong>Next Step:</strong> Copy your maintenance image to the <code>images/</code> folder, then follow the deployment guide to publish to Azure App Service.
+    </p>
+</body>
+</html>
