@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '24.x'
 
@@ -52,4 +52,4 @@ jobs:
           app-name: 'dev-genaiqep'
           slot-name: 'maintenance'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_528D9EC6A37145CEB854628D741961EE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_04E0A8B408D14DD894BEC2B63EAC5FB1 }}
